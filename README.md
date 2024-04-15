@@ -2,7 +2,7 @@
  # **BUILDING A MEDICAL INSURANCE COST PREDICTION MACHINE LEARNING MODEL**
 
 
-AIM:
+# AIM:
 
    1) To predict medical costs for patients based on demographic factors,
        lifestyle-related information, health status, insurance plan type,
@@ -13,7 +13,7 @@ AIM:
 
 
 
-PROJECT DESCRIPTION:
+# PROJECT DESCRIPTION:
 
 Hospital ABC, a leading healthcare provider, aims to optimize its resource allocation and improve
 patient care by understanding the factors influencing medical costs for its patients. To achieve
@@ -28,11 +28,11 @@ accessibility of healthcare services for its patients.
 
 
 
- DATA SOURCE:
+# DATA SOURCE:
   
   https://drive.google.com/drive/recent
  
- DATASET DESCRIPTION:
+ # DATASET DESCRIPTION:
 
  This dataset contains 1000 rows and 35 columns.Columns are Age, BMI, Children, Chronic_Conditions,
 Distance_to_Nearest_Hospital, Family_Medical_History,
@@ -43,21 +43,27 @@ In this case Charges is the Target column,other columns are features(columns tha
 
 This dataset contains  null values in all columns, it's crucial to preprocess the data before training a machine learning model. 
  
- TECHNOLOGIES USED
+ # TECHNOLOGIES USED
 
- 1)Python-programming language for development.
+ 1) ## Python
+            -programming language for development.
 
- 2)Power bi-For data visualisation
+ 2) ## Power bi
+            -For data visualisation
 
- 3)Seaborn-Data Visualisation
+ 3) ## Seaborn
+           -Data Visualisation
 
- 4)Matplotlib-Data Visualisation
+ 4) ## Matplotlib
+           -Data Visualisation
 
- 5)Scikit-learn- a versatile machine learning library in Python, provided essential functionalities for tasks such as data preprocessing, feature selection, and building machine learning models.
+ 5) ## Scikit-learn
+          - a versatile machine learning library in Python, provided essential functionalities for tasks such as data preprocessing, feature selection, and building machine 
+            learning models.
 
  
  
-STEPS INVOLVED:
+# STEPS INVOLVED:
 
 1)Dataset loading using read_csv from pandas library.
 
@@ -69,7 +75,7 @@ STEPS INVOLVED:
 
 4)To find the statistical summary of our numerical columns use df.describe()
 
-DATA PREPROCESSING
+# DATA PREPROCESSING
 
 1)Checking for duplicates in our dataset using duplicated() .No duplicates in our datset.
 
@@ -193,7 +199,7 @@ It is calculated using corr().
 20)Feature Selection using Random Forest regressor to improve my model performance.
 
 
- MACHINE LEARNING
+# MACHINE LEARNING
 
 Machine learning :Machine learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computers to perform tasks without explicit programming instructions. In essence, it's about teaching machines to learn from data in order to make predictions or decisions.
 
@@ -204,13 +210,13 @@ Machine learning :Machine learning is a subset of artificial intelligence (AI) t
 
 
 
-MODELS USED:
+# MODELS USED:
 
-Linear Regression: 
+## Linear Regression: 
 
        Linear regression is a fundamental statistical method used for modeling the relationship between a dependent variable (target) and one or more independent variables (features). It assumes a linear relationship between the independent variables and the dependent variable.
 
-Decision Tree Regressor:   
+## Decision Tree Regressor:   
 
 A Decision Tree Regressor is a type of supervised learning algorithm used for regression tasks. It builds a predictive model in the form of a tree structure where each internal node represents a decision based on the value of a feature, each branch represents the outcome of the decision, and each leaf node represents the predicted continuous value.
 
@@ -232,7 +238,7 @@ Interpretability: Decision trees are easy to interpret and visualize, making the
 Non-linearity: Decision trees can capture non-linear relationships between features and the target variable, making them suitable for modeling complex datasets.
 Robustness to Irrelevant Features: Decision trees are robust to irrelevant features and can handle datasets with a mixture of numerical and categorical features.
 
-Ensemble Methods:
+## Ensemble Methods:
         Ensemble methods are machine learning techniques that combine the predictions of multiple individual models to produce a stronger, more robust predictive model. These methods leverage the concept of "wisdom of the crowd," where aggregating the predictions of multiple models can often outperform any single model.
 
 There are several types of ensemble methods, but two of the most popular are:
@@ -254,7 +260,7 @@ Improved predictive performance: Ensemble methods often yield better generalizat
 Robustness to overfitting: By combining the predictions of multiple models, ensemble methods can mitigate overfitting and reduce variance, leading to more stable and reliable predictions.
 Flexibility and scalability: Ensemble methods can be applied to a wide range of machine learning algorithms and are easily scalable to large datasets.
 
-i)Random Forest Regressor:
+i)  ## Random Forest Regressor:
             Random Forest: The Random Forest algorithm consists of a collection of decision trees. Each decision tree is trained independently on a random subset of the training data, and each split in the tree is based on a randomly selected subset of features.
 
 Bootstrap Aggregation (Bagging): Random Forest employs a technique called bootstrap aggregation, or bagging, to train multiple decision trees. This involves randomly sampling the training data with replacement to create multiple bootstrap samples, and then training a decision tree on each sample.
@@ -270,7 +276,7 @@ Robustness: Random Forests are less prone to overfitting compared to individual 
 Feature Importance: Random Forests can provide insights into feature importance, helping to identify the most relevant features for predicting the target variable.
 
 
-ii)XGBoost:
+ii) ## XGBoost:
 
    XGBoost (Extreme Gradient Boosting) Regressor is a powerful and popular machine learning algorithm used for regression tasks. It is an implementation of gradient boosting, a machine learning technique that builds an ensemble of weak learners (decision trees) sequentially to make accurate predictions.
 
@@ -320,36 +326,38 @@ AdaBoost Regressor offers several benefits:
 High Predictive Performance: By combining the predictions of multiple weak regression models, AdaBoost Regressor often achieves high accuracy in predicting continuous target variables.
 Robustness: AdaBoost Regressor is less prone to overfitting compared to individual weak models, as it focuses on minimizing errors across multiple models.
 Flexibility: AdaBoost Regressor can be used with various base regression models, allowing flexibility in model selection based on the characteristics of the dataset.
- METRICS USED:
+ 
+ # METRICS USED:
 
- 1)Mean Absolute Error:
+ 1) ## Mean Absolute Error:
      
      In machine learning, the Mean Absolute Error (MAE) is a common metric used to evaluate the performance of regression models. It measures the average absolute difference between the predicted values and the actual values in the dataset.
 
 Lower values of MAE indicate better model performance, with a MAE of 0 indicating perfect predictions where the predicted values exactly match the actual values.
 
 
-2)Rsquared(coefficient of determination):
+2) ## Rsquared(coefficient of determination):
   
   The coefficient of determination, R2
  , is a statistical measure that represents the proportion of the variance in the dependent variable (target) that is predictable from the independent variables (features) in a regression model. In other words, it quantifies the goodness of fit of the model to the observed data.
  
 
 
- SELECTED MODEL
+  # SELECTED MODEL
 
  I have choosen Random Forest Regressor,beacause it gives me low MAE and a good R2score.
 
 
 Then plotted actual vs predicted values for a random regressor model.
- SAVING MY MODEL:
+
+ # SAVING MY MODEL:
 
  joblib is a Python library that provides utilities for saving and loading machine learning model.
 
  import joblib
 joblib.dump(rf_regressor, 'model_filename.pkl')
-## rf_regressor is my mdel,model_filename is the file to which my model is saved.
- CONCLUSIONS:
+
+ # CONCLUSIONS:
 
 
 1) Employed linear regression alongside ensemble methods such as Random Forest Regressor, XGBoost, AdaBoost, and Decision Trees due to the limited linear relationship observed in the data. Notably, Random Forest Regressor yielded a commendable R2 score while minimizing mean absolute error.
